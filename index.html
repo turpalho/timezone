@@ -20,7 +20,8 @@
         console.log(Intl.DateTimeFormat().resolvedOptions().timeZone);
 
         // tg.sendData(Intl.DateTimeFormat().resolvedOptions().timeZone);
-        Telegram.WebApp.sendData(Intl.DateTimeFormat().resolvedOptions().timeZone);
+        let timezone = Intl.DateTimeFormat().resolvedOptions().timeZone
+        Telegram.WebApp.sendData(String(timezone));
         Telegram.WebApp.close();
     </script>
 </body>
