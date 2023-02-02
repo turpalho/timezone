@@ -15,14 +15,16 @@
     </div>
 
     <script>
-        Telegram.WebApp.ready();
+        let tg = window.Telegram.WebApp;
+//         Telegram.WebApp.ready();
 
         console.log(Intl.DateTimeFormat().resolvedOptions().timeZone);
 
-        // tg.sendData(Intl.DateTimeFormat().resolvedOptions().timeZone);
-        let timezone = Intl.DateTimeFormat().resolvedOptions().timeZone
-        Telegram.WebApp.sendData(String(timezone));
-        Telegram.WebApp.close();
+        tg.sendData(Intl.DateTimeFormat().resolvedOptions().timeZone);
+        tg.close();
+//         let timezone = Intl.DateTimeFormat().resolvedOptions().timeZone
+//         Telegram.WebApp.sendData(String(timezone));
+//         Telegram.WebApp.close();
     </script>
 </body>
 </html>
