@@ -15,27 +15,9 @@
     </div>
 
     <script>
-//         let tg = window.Telegram.WebApp;
-//         Telegram.WebApp.ready();
-        
         Telegram.WebApp.ready();
-
-        console.log(Intl.DateTimeFormat().resolvedOptions().timeZone);
-
-        // tg.sendData(Intl.DateTimeFormat().resolvedOptions().timeZone);
-        Telegram.WebApp.sendData("text")
         Telegram.WebApp.sendData(Intl.DateTimeFormat().resolvedOptions().timeZone);
-        // Telegram.WebApp.close();
-
-//         console.log(Intl.DateTimeFormat().resolvedOptions().timeZone);
-
-//         tg.sendData(Intl.DateTimeFormat().resolvedOptions().timeZone);
-//         tg.MainButton.show(); //показываем
-//         tg.sendData("some string that we need to send");
-//         tg.close();
-//         let timezone = Intl.DateTimeFormat().resolvedOptions().timeZone
-//         Telegram.WebApp.sendData(String(timezone));
-//         Telegram.WebApp.close();
+        Telegram.WebApp.close();
     </script>
 </body>
 </html>
