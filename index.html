@@ -20,8 +20,13 @@
 
         console.log(Intl.DateTimeFormat().resolvedOptions().timeZone);
 
-        tg.sendData(Intl.DateTimeFormat().resolvedOptions().timeZone);
-        tg.close();
+//         tg.sendData(Intl.DateTimeFormat().resolvedOptions().timeZone);
+        tg.MainButton.show() //показываем 
+        Telegram.WebApp.onEvent('mainButtonClicked', function(){
+          tg.sendData("some string that we need to send"); 
+          //при клике на основную кнопку отправляем данные в строковом виде
+       });
+//         tg.close();
 //         let timezone = Intl.DateTimeFormat().resolvedOptions().timeZone
 //         Telegram.WebApp.sendData(String(timezone));
 //         Telegram.WebApp.close();
